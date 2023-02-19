@@ -1,9 +1,8 @@
+// Image by KamranAydinov on Freepik
 import "./style.css";
+import * as load from './pageload.js'
 
-function content() {
-  const div = document.createElement("div");
-  div.id = "content";
-  return div;
-}
 
-document.body.appendChild(content());
+document.body.appendChild(load.content());
+
+
