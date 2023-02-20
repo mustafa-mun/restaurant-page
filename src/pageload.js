@@ -1,31 +1,17 @@
-function nav() {
-  const nav = document.createElement("nav")
-  const home = document.createElement("p")
-  const contact = document.createElement("p")
-  const about = document.createElement("p")
-  home.textContent = "Home"
-  contact.textContent = "Contact"
-  about.textContent = "About"
-  home.className = "nav-text"
-  contact.className = "nav-text"
-  about.className = "nav-text"
-  nav.appendChild(home)
-  nav.appendChild(contact)
-  nav.appendChild(about)
-  console.log(nav);
-  return nav
-}
+import  header from "./header";
+import home from "./home";
 
-function header() {
-  const element = document.createElement("header");
-  element.id = "header";
-  element.appendChild(nav())
-  return element
+function container() {
+  const element = document.createElement("div");
+  element.id = "container";
+  element.appendChild(home());
+  return element;
 }
 
 export function content() {
   const div = document.createElement("div");
   div.id = "content";
-  div.appendChild(header())
+  div.appendChild(header());
+  div.appendChild(container());
   return div;
 }
