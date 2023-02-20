@@ -1,4 +1,5 @@
 import Icon from "./assets/pizza-logo.png";
+
 export default function home() {
   const section = document.createElement("section");
   section.id = "home-section";
@@ -8,14 +9,22 @@ export default function home() {
   const logo = new Image();
   logo.src = Icon;
   logo.id = "logo";
-  const caption = document.createElement("p");
-  caption.id = "caption";
-  caption.innerText =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim lobortis scelerisque fermentum dui faucibus. Quis viverra nibh cras pulvinar mattis. Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque. In cursus turpis massa tincidunt dui ut. At ultrices mi tempus imperdiet nulla malesuada pellentesque. Id semper risus in hendrerit gravida rutrum quisque non. Ultrices eros in cursus turpis massa tincidunt dui ut. At tellus at urna condimentum mattis pellentesque id nibh. Libero enim sed faucibus turpis in eu.";
-  
-
+  const pOne = document.createElement("p");
+  const pTwo = document.createElement("p");
+  const pThree = document.createElement("p");
+  pOne.className = "caption";
+  pTwo.className = "caption";
+  pThree.className = "caption";
+  pOne.innerText =
+    "Welcome to Marcella, the home of authentic Italian pizza! Our restaurant is named after our grandmother, who taught us the secret to making perfect pizza dough from scratch. At Marcella, we believe that pizza is more than just a food - it's a way of life. That's why we use only the freshest, high-quality ingredients in every pizza we make, from the tangy San Marzano tomatoes to the creamy mozzarella cheese.";
+  pTwo.innerText = 
+    "Whether you're in the mood for a classic Margherita or something a little more adventurous, our menu has something for everyone. And if pizza isn't your thing, we also offer a range of delicious salads, pastas, and desserts, all made with the same care and attention to detail as our pizzas."
+  pThree.innerText =
+    "At Marcella, we're passionate about creating an authentic Italian dining experience that's both welcoming and delicious. So why not come and see us today, and let us share a slice of our heritage with you?"
   section.appendChild(logoText);
   section.appendChild(logo);
-  section.appendChild(caption)
+  section.appendChild(pOne)
+  section.appendChild(pTwo)
+  section.appendChild(pThree)
   return section;
 }

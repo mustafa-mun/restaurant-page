@@ -1,10 +1,11 @@
-import  header from "./header";
+import header from "./header";
 import home from "./home";
+import contact from "./contact";
 
 function container() {
   const element = document.createElement("div");
   element.id = "container";
-  element.appendChild(home());
+  element.appendChild(contact());
   return element;
 }
 

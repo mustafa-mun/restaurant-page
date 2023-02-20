@@ -45,8 +45,11 @@ nav {
 }
 
 .nav-text {
-  border-bottom: solid white 1px;
   cursor: pointer;
+}
+
+.border-bottom {
+  border-bottom: solid white 1px;
 }
 
 #container {
@@ -57,7 +60,7 @@ nav {
   padding: 20px;
   border-radius: 25px;
   width: 680px;
-  margin-top: 15vh;
+  margin-top: 5vh;
   margin-left: 37vw;
 }
 
@@ -66,6 +69,11 @@ nav {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 30px;
+}
+
+#contact-section {
+  align-self: flex-start;
 }
 
 #logo-text {
@@ -79,9 +87,21 @@ nav {
   width: 85px;
 }
 
-#caption {
+.caption {
   color: white;
   text-align: center;
-  font-size: 1.4rem;
-  margin: 30px;
+  font-size: 1.2rem;
+
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 20px;
+  font-size: 16px;
+}
+
+.info-icon {
+  width: 20px;
 }
