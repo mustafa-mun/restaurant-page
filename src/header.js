@@ -8,7 +8,7 @@ function nav() {
   menu.textContent = "Menu";
   menu.id = "menu"
   contact.textContent = "Contact";
-  contact.id = "about"
+  contact.id = "contact"
   home.className = "nav-text";
   contact.className = "nav-text";
   menu.className = "nav-text";

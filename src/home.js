@@ -1,6 +1,6 @@
 import Icon from "./assets/pizza-logo.png";
 
-export default function home() {
+export default function loadHome() {
   const section = document.createElement("section");
   section.id = "home-section";
   const logoText = document.createElement("em");
