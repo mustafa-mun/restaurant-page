@@ -1,18 +1,20 @@
 function nav() {
   const nav = document.createElement("nav");
   const home = document.createElement("p");
+  const menu = document.createElement("p");
   const contact = document.createElement("p");
-  const about = document.createElement("p");
+  home.id = "home"
   home.textContent = "Home";
+  menu.textContent = "Menu";
+  menu.id = "menu"
   contact.textContent = "Contact";
-  about.textContent = "About";
+  contact.id = "about"
   home.className = "nav-text";
   contact.className = "nav-text";
-  about.className = "nav-text";
+  menu.className = "nav-text";
   nav.appendChild(home);
+  nav.appendChild(menu);
   nav.appendChild(contact);
-  nav.appendChild(about);
-  console.log(nav);
   return nav;
 }
 
