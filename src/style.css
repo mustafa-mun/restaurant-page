@@ -10,6 +10,7 @@ html {
   height: 100%;
   padding: 0;
   margin: 0;
+  color: white;
 }
 
 body {
@@ -42,7 +43,6 @@ nav {
   display: flex;
   font-size: 1.5rem;
   gap: 40px;
-  color: white;
 }
 
 .nav-text {
@@ -76,10 +76,15 @@ nav {
 #contact-section {
   align-self: flex-start;
 }
+iframe {
+ width:675px;
+ height:450px;
+ border-radius: 12px;
+ border: none;
+}
 
 #logo-text {
   margin: 0;
-  color: white;
   font-size: 5rem;
   font-family: Italiano;
 }
@@ -89,7 +94,6 @@ nav {
 }
 
 .caption {
-  color: white;
   text-align: center;
   font-size: 1.2rem;
 }
@@ -97,7 +101,6 @@ nav {
 .info-container {
   display: flex;
   align-items: center;
-  color: white;
   gap: 20px;
   font-size: 16px;
 }
@@ -114,16 +117,32 @@ nav {
 }
 
 .header-text {
-  color: white;
   font-family: Italiano;
   font-size: 5rem;
   margin-left: 13vw;
 }
 
+.menu-text-wrapper {
+  display: flex;
+  align-items: center;
+  width: 660px;
+  justify-content: space-between;
+}
+
 .menu-text-container {
   display: flex;
+  flex-direction: column;
 }
 
 .menu-text {
-  color: white;
+  border-bottom: solid white 1px;
+}
+
+.menu-ingredient-text {
+  font-size: 18px;
+}
+
+.menu-price-text {
+  font-size: 20px;
+  align-self: flex-end;
 }
