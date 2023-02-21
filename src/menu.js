@@ -41,10 +41,11 @@ export default function menu() {
     ingredient.textContent = `${pizzaIngredients[i]}`;
     price.textContent = `€${pizzaPrices[i]}`;
 
-    wrapper.appendChild(container);
-    wrapper.appendChild(price);
+
     container.appendChild(name);
     container.appendChild(ingredient);
+    wrapper.appendChild(container);
+    wrapper.appendChild(price);
     section.appendChild(wrapper);
   }
   return section;
