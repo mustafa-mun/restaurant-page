@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Italiano';
-  src: url('assets/Italianno-Regular.ttf') format('truetype');
+  font-family: "Italiano";
+  src: url("assets/Italianno-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -17,6 +17,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment:fixed;
 }
 
 #content {
@@ -33,8 +34,8 @@ body {
   align-items: center;
   height: 100px;
   width: 100%;
-  background-color: rgba(0,0,0,0.7);
-  border: none ;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
 }
 
 nav {
@@ -56,7 +57,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
   border-radius: 25px;
   width: 680px;
@@ -91,7 +92,6 @@ nav {
   color: white;
   text-align: center;
   font-size: 1.2rem;
-
 }
 
 .info-container {
@@ -104,4 +104,26 @@ nav {
 
 .info-icon {
   width: 20px;
+}
+
+#menu-section {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-left: 5px;
+}
+
+.header-text {
+  color: white;
+  font-family: Italiano;
+  font-size: 5rem;
+  margin-left: 13vw;
+}
+
+.menu-text-container {
+  display: flex;
+}
+
+.menu-text {
+  color: white;
 }

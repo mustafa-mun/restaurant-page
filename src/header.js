@@ -9,7 +9,7 @@ function nav() {
   menu.id = "menu"
   contact.textContent = "Contact";
   contact.id = "contact"
-  home.className = "nav-text";
+  home.className = "nav-text border-bottom";
   contact.className = "nav-text";
   menu.className = "nav-text";
   nav.appendChild(home);

@@ -2,6 +2,7 @@ import "./style.css";
 import * as load from "./pageload.js";
 import home from "./home";
 import contact from "./contact";
+import menu from "./menu";
 
 document.body.appendChild(load.content());
 
@@ -19,12 +20,42 @@ function loadSection(parent, section, sectionFunc) {
   }
 }
 
+function toggleBorder(element) {
+  element.classList.toggle("border-bottom");
+}
+
 contactNav.addEventListener("click", () => {
   const contactSection = document.getElementById("contact-section");
   loadSection(container, contactSection, contact());
+  toggleBorder(contactNav);
+  if (Array.from(homeNav.classList).includes("border-bottom")) {
+    toggleBorder(homeNav);
+  }
+  if (Array.from(menuNav.classList).includes("border-bottom")) {
+    toggleBorder(menuNav);
+  }
 });
 
 homeNav.addEventListener("click", () => {
   const homeSection = document.getElementById("home-section");
   loadSection(container, homeSection, home());
+  toggleBorder(homeNav);
+  if (Array.from(contactNav.classList).includes("border-bottom")) {
+    toggleBorder(contactNav);
+  }
+  if (Array.from(menuNav.classList).includes("border-bottom")) {
+    toggleBorder(menuNav);
+  }
 });
+
+menuNav.addEventListener("click", () => {
+  const menuSection = document.getElementById("menu-section");
+  loadSection(container, menuSection, menu());
+  toggleBorder(menuNav)
+  if (Array.from(contactNav.classList).includes("border-bottom")) {
+    toggleBorder(contactNav);
+  }
+  if (Array.from(homeNav.classList).includes("border-bottom")) {
+    toggleBorder(homeNav);
+  }
+})
