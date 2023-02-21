@@ -23,23 +23,27 @@ export default function menu() {
   headerText.className = "header-text";
   headerText.textContent = "Menu";
   section.appendChild(headerText);
+
   for (let i = 0; i < pizzaNames.length; i += 1) {
-    const p = document.createElement("p");
+    const name = document.createElement("p");
     const container = document.createElement("div");
     const wrapper = document.createElement("div");
     const ingredient = document.createElement("p");
     const price = document.createElement("p");
+
     price.className = "menu-price-text";
     container.className = "menu-text-ontainer";
     wrapper.classList = "menu-text-wrapper";
-    p.className = "menu-text";
+    name.className = "menu-text";
     ingredient.className = "menu-ingredient-text";
-    p.textContent = `${pizzaNames[i]}`;
+
+    name.textContent = `${pizzaNames[i]}`;
     ingredient.textContent = `${pizzaIngredients[i]}`;
-    price.textContent = `$${pizzaPrices[i]}`
+    price.textContent = `€${pizzaPrices[i]}`;
+
     wrapper.appendChild(container);
-    wrapper.appendChild(price)
-    container.appendChild(p);
+    wrapper.appendChild(price);
+    container.appendChild(name);
     container.appendChild(ingredient);
     section.appendChild(wrapper);
   }

@@ -18,7 +18,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment:fixed;
+  background-attachment: fixed;
 }
 
 #content {
@@ -77,10 +77,10 @@ nav {
   align-self: flex-start;
 }
 iframe {
- width:675px;
- height:450px;
- border-radius: 12px;
- border: none;
+  width: 675px;
+  height: 450px;
+  border-radius: 12px;
+  border: none;
 }
 
 #logo-text {
