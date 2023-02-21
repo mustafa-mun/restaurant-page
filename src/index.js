@@ -10,9 +10,9 @@ const menuNav = document.getElementById("menu");
 const contactNav = document.getElementById("contact");
 const container = document.getElementById("container");
 
-function loadSection(section, sectionFunc) {
+function loadSection(parent, section, sectionFunc) {
   if (parent.firstChild !== section) {
-    load.refresh(container);
+    load.refresh(parent);
     parent.appendChild(sectionFunc);
   } else {
     return;
@@ -21,10 +21,10 @@ function loadSection(section, sectionFunc) {
 
 contactNav.addEventListener("click", () => {
   const contactSection = document.getElementById("contact-section");
-  loadSection(contactSection, contact())
+  loadSection(container, contactSection, contact());
 });
 
 homeNav.addEventListener("click", () => {
   const homeSection = document.getElementById("home-section");
-  loadSection(homeSection, home());
+  loadSection(container, homeSection, home());
 });
