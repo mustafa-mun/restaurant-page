@@ -27,7 +27,9 @@ function toggleBorder(element) { // Toggle nav text border function
 contactNav.addEventListener("click", () => { // Tab switch
   const contactSection = document.getElementById("contact-section");
   loadSection(container, contactSection, contact());
-  toggleBorder(contactNav);
+  if (!Array.from(contactNav.classList).includes("border-bottom")) {
+    toggleBorder(contactNav);
+  }
   if (Array.from(homeNav.classList).includes("border-bottom")) {
     toggleBorder(homeNav);
   }
@@ -39,7 +41,9 @@ contactNav.addEventListener("click", () => { // Tab switch
 homeNav.addEventListener("click", () => { // Tab switch
   const homeSection = document.getElementById("home-section");
   loadSection(container, homeSection, home());
-  toggleBorder(homeNav);
+  if (!Array.from(homeNav.classList).includes("border-bottom")) {
+    toggleBorder(homeNav);
+  }
   if (Array.from(contactNav.classList).includes("border-bottom")) {
     toggleBorder(contactNav);
   }
@@ -51,7 +55,9 @@ homeNav.addEventListener("click", () => { // Tab switch
 menuNav.addEventListener("click", () => { // Tab switch
   const menuSection = document.getElementById("menu-section");
   loadSection(container, menuSection, menu());
-  toggleBorder(menuNav);
+  if (!Array.from(menuNav.classList).includes("border-bottom")) {
+    toggleBorder(menuNav);
+  }
   if (Array.from(contactNav.classList).includes("border-bottom")) {
     toggleBorder(contactNav);
   }
