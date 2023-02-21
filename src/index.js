@@ -11,7 +11,8 @@ const menuNav = document.getElementById("menu");
 const contactNav = document.getElementById("contact");
 const container = document.getElementById("container");
 
-function loadSection(parent, section, sectionFunc) { // Load spesific section function
+function loadSection(parent, section, sectionFunc) {
+  // Load spesific section function
   if (parent.firstChild !== section) {
     load.refresh(parent);
     parent.appendChild(sectionFunc);
@@ -20,11 +21,13 @@ function loadSection(parent, section, sectionFunc) { // Load spesific section fu
   }
 }
 
-function toggleBorder(element) { // Toggle nav text border function
+function toggleBorder(element) {
+  // Toggle nav text border function
   element.classList.toggle("border-bottom");
 }
 
-function checkClass(firstNav, secondNav, thirdNav) { // Check if tabs has border bottom class
+function checkClass(firstNav, secondNav, thirdNav) {
+  // Check if tabs has border bottom class
   if (!Array.from(firstNav.classList).includes("border-bottom")) {
     toggleBorder(firstNav);
   }
@@ -36,20 +39,23 @@ function checkClass(firstNav, secondNav, thirdNav) { // Check if tabs has border
   }
 }
 
-contactNav.addEventListener("click", () => { // Tab switch
+contactNav.addEventListener("click", () => {
+  // Tab switch
   const contactSection = document.getElementById("contact-section");
   loadSection(container, contactSection, contact());
-  checkClass(contactNav, homeNav, menuNav) // Toggle border
+  checkClass(contactNav, homeNav, menuNav); // Toggle border
 });
 
-homeNav.addEventListener("click", () => { // Tab switch
+homeNav.addEventListener("click", () => {
+  // Tab switch
   const homeSection = document.getElementById("home-section");
   loadSection(container, homeSection, home());
-  checkClass(homeNav, contactNav, menuNav) // Toggle border
+  checkClass(homeNav, contactNav, menuNav); // Toggle border
 });
 
-menuNav.addEventListener("click", () => { // Tab switch
+menuNav.addEventListener("click", () => {
+  // Tab switch
   const menuSection = document.getElementById("menu-section");
   loadSection(container, menuSection, menu());
-  checkClass(menuNav, contactNav, homeNav) // Toggle border
+  checkClass(menuNav, contactNav, homeNav); // Toggle border
 });
