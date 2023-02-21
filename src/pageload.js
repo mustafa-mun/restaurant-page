@@ -8,7 +8,7 @@ export function refresh(parent) {
   return parent;
 }
 
-export function container(section) {
+function container(section) {
   const element = document.createElement("div");
   element.id = "container";
   element.appendChild(section);
