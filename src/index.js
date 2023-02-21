@@ -24,44 +24,32 @@ function toggleBorder(element) { // Toggle nav text border function
   element.classList.toggle("border-bottom");
 }
 
+function checkClass(firstNav, secondNav, thirdNav) { // Check if tabs has border bottom class
+  if (!Array.from(firstNav.classList).includes("border-bottom")) {
+    toggleBorder(firstNav);
+  }
+  if (Array.from(secondNav.classList).includes("border-bottom")) {
+    toggleBorder(secondNav);
+  }
+  if (Array.from(thirdNav.classList).includes("border-bottom")) {
+    toggleBorder(thirdNav);
+  }
+}
+
 contactNav.addEventListener("click", () => { // Tab switch
   const contactSection = document.getElementById("contact-section");
   loadSection(container, contactSection, contact());
-  if (!Array.from(contactNav.classList).includes("border-bottom")) {
-    toggleBorder(contactNav);
-  }
-  if (Array.from(homeNav.classList).includes("border-bottom")) {
-    toggleBorder(homeNav);
-  }
-  if (Array.from(menuNav.classList).includes("border-bottom")) {
-    toggleBorder(menuNav);
-  }
+  checkClass(contactNav, homeNav, menuNav) // Toggle border
 });
 
 homeNav.addEventListener("click", () => { // Tab switch
   const homeSection = document.getElementById("home-section");
   loadSection(container, homeSection, home());
-  if (!Array.from(homeNav.classList).includes("border-bottom")) {
-    toggleBorder(homeNav);
-  }
-  if (Array.from(contactNav.classList).includes("border-bottom")) {
-    toggleBorder(contactNav);
-  }
-  if (Array.from(menuNav.classList).includes("border-bottom")) {
-    toggleBorder(menuNav);
-  }
+  checkClass(homeNav, contactNav, menuNav) // Toggle border
 });
 
 menuNav.addEventListener("click", () => { // Tab switch
   const menuSection = document.getElementById("menu-section");
   loadSection(container, menuSection, menu());
-  if (!Array.from(menuNav.classList).includes("border-bottom")) {
-    toggleBorder(menuNav);
-  }
-  if (Array.from(contactNav.classList).includes("border-bottom")) {
-    toggleBorder(contactNav);
-  }
-  if (Array.from(homeNav.classList).includes("border-bottom")) {
-    toggleBorder(homeNav);
-  }
+  checkClass(menuNav, contactNav, homeNav) // Toggle border
 });
